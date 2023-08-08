@@ -10,6 +10,5 @@ RUN rosdep update
 COPY update_apt_repo.sh /artifacts/update_apt_repo.sh
 WORKDIR /artifacts
 RUN sh update_apt_repo.sh
-
 WORKDIR /workspace
-# RUN colcon list -t -p | xargs -L 1 bash -c 'cd "$1" && apt update && rosdep install -iry --from-paths . && bloom-generate rosdebian --os-name ubuntu --os-version jammy --ros-distro humble && fakeroot debian/rules binary && cd /artifacts && sh update_apt_repo.sh' _
+RUN colcon list -t -p | xargs -L 1 bash -c 'cd "$1" && apt update && rosdep install -iry --from-paths . && bloom-generate rosdebian --os-name ubuntu --os-version jammy --ros-distro humble && fakeroot debian/rules binary && cd /artifacts && sh update_apt_repo.sh && dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-amd64/*.deb' _
