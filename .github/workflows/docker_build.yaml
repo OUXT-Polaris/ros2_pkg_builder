@@ -18,7 +18,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.WAMV_TAN_BOT_SECRET }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/bake-action@v3
         with:
