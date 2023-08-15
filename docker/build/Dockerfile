@@ -1,4 +1,4 @@
-FROM builder
+FROM builder as build-stage
 WORKDIR /workspace
 COPY workspace.repos workspace.repos
 RUN vcs import . < workspace.repos
