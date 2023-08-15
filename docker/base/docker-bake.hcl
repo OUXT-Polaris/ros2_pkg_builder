@@ -4,7 +4,7 @@ group "default" {
 
 target "builder" {
   target = "build-base-stage"
-  tags = ["ros2_pkg_builder"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder"]
   args = {
     "ROS_DISTRO" : "humble"
   }
