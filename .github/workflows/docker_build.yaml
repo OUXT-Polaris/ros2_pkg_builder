@@ -22,7 +22,7 @@ jobs:
       - name: Build and push
         uses: docker/bake-action@v3
         with:
-          push: false
+          push: true
           workdir: docker/base
           files: |
             ./docker-bake.hcl
