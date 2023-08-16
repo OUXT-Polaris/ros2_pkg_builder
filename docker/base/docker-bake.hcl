@@ -4,7 +4,7 @@ group "default" {
 
 target "latest" {
   target = "build-base-stage"
-  tags = ["docker.io/wamvtan/ros2_pkg_builder"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder:latest"]
   args = {
     "ROS_DISTRO" : "latest"
   }
@@ -13,6 +13,7 @@ target "latest" {
 
 target "rolling" {
   inherits = ["latest"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder:rolling"]
   args = {
     "ROS_DISTRO" : "rolling"
   }
@@ -20,6 +21,7 @@ target "rolling" {
 
 target "iron" {
   inherits = ["latest"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder:iron"]
   args = {
     "ROS_DISTRO" : "iron"
   }
@@ -27,6 +29,7 @@ target "iron" {
 
 target "humble" {
   inherits = ["latest"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder:humble"]
   args = {
     "ROS_DISTRO" : "humble"
   }
