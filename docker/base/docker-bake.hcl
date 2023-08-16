@@ -1,5 +1,5 @@
 group "default" {
-  targets = ["latest", "iron", "humble"]
+  targets = ["latest", "iron", "humble", "rolling"]
 }
 
 target "latest" {
