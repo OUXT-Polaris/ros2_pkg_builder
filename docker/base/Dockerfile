@@ -26,4 +26,4 @@ RUN chmod +x /workspace/entrypoint.sh
 COPY update_apt_repo.sh /workspace/update_apt_repo.sh
 RUN chmod +x /workspace/update_apt_repo.sh
 
-ENTRYPOINT [ "/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.bash && /workspace/entrypoint.sh"]
+ENTRYPOINT [ "/bin/bash", "-c", "cp /artifacts/workspace.repos /workspace/workspace.repos && source /opt/ros/${ROS_DISTRO}/setup.bash && /workspace/entrypoint.sh"]
