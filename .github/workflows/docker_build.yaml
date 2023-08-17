@@ -21,6 +21,6 @@ jobs:
         uses: docker/bake-action@v3
         with:
           push: true
-          workdir: docker/base
+          workdir: docker
           files: |
             ./docker-bake.hcl
