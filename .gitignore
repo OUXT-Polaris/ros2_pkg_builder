@@ -1,2 +1,3 @@
 workspace.repos
 amd64
+__pycache__
