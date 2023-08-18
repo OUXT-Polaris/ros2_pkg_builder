@@ -41,6 +41,21 @@ def build_deb_packages(architecture: str, rosdistro: Rosdistro, repos_file: str)
         Path(architecture_str).joinpath("update_apt_repo.sh"),
     )
     shutil.copyfile(repos_file, Path(architecture_str).joinpath("workspace.repos"))
+    client = docker.from_env()
+    container = client.containers.run(
+        image="ros2_pkg_builder:humble",
+        volumes={
+            Path(architecture_str).absolute(): {
+                "bind": "/artifacts",
+                "mode": "rw",
+            },
+        },
+        detach=True,
+        remove=True,
+    )
+    output = container.attach(stdout=True, stream=True, logs=True)
+    for line in output:
+        print(line)
 
 
 def main():
