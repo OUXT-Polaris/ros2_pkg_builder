@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ros2-pkg-builder"
+version = "0.0.1"
+description = "Tools for setting up hosting your own buildfarm on github"
+authors = ["Masaya Kataoka <ms.kataoka@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ros2_pkg_builder"}]
+license = "Apache 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+docker = "^6.1.3"
+argparse = "^1.4.0"
+pathlib = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.3"
+mypy = "^1.5.1"
+black = "^23.7.0"
+
+[tool.poetry.scripts]
+build_deb_packages = "ros2_pkg_builder.build:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
