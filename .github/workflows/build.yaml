@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - 'master'
+  pull_request:
+    paths:
+      - .github/workflows/build.yaml
+      - ros2_pkg_builder/**
+      - tests/**
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * *
+  release:
+    types: [published]
 
 jobs:
   bake:
@@ -42,3 +52,7 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: install
         run: poetry install
+      - name: prepare
+        run: poetry run task prepare
+      - name: lint
+        run: poetry run task lint
