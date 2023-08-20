@@ -1,10 +1,10 @@
-import docker
-from enum import Enum
-from pathlib import Path
-import os
-import ros2_pkg_builder
-import shutil
 import argparse
+import os
+import shutil
+from pathlib import Path
+
+import docker
+import ros2_pkg_builder
 
 
 def build_deb_packages(architecture: str, rosdistro: str, repos_file: str):
