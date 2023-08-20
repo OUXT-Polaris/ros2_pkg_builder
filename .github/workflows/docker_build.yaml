@@ -1,4 +1,4 @@
-name: Docker Build
+name: Build
 
 on:
   push:
@@ -24,3 +24,21 @@ jobs:
           workdir: docker
           files: |
             ./docker-bake.hcl
+  build_python_packages:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10.6"]
+        poetry-version: ["1.5.1"]
+        os: [ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: install
+        run: poetry install

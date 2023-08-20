@@ -20,7 +20,7 @@ def build_deb_packages(architecture: str, rosdistro: str, repos_file: str):
     shutil.copyfile(repos_file, Path(architecture).joinpath("workspace.repos"))
     client = docker.from_env()
     container = client.containers.run(
-        image="wamvtan/ros2_pkg_builder:humble",
+        image="wamvtan/ros2_pkg_builder:"+rosdistro,
         volumes={
             Path(architecture).absolute(): {
                 "bind": "/artifacts",
