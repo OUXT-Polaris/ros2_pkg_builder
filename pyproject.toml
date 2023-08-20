@@ -17,6 +17,9 @@ pathlib = "^1.0.1"
 pre-commit = "^3.3.3"
 mypy = "^1.5.1"
 black = "^23.7.0"
+taskipy = "^1.12.0"
+pytest = "^7.4.0"
+lark = "^1.1.7"
 
 [tool.poetry.scripts]
 build_deb_packages = "ros2_pkg_builder.build:main"
@@ -24,3 +27,13 @@ build_deb_packages = "ros2_pkg_builder.build:main"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+prepare.cmd = "pre-commit install && pre-commit install --hook-type commit-msg"
+prepare.help = "sets up a development environment"
+
+lint.cmd = "pre-commit run --all-files"
+lint.help = "runs linters (+ fix)"
+
+test.cmd  = "pytest"
+test.help = "runs tests"
