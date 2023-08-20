@@ -12,39 +12,26 @@
     sudo usermod -aG docker $USER && newgrp docker
     ```
     After running the above command, it might be necessary to reboot your machine.
+- Poetry
+    - This tools was tested under poetry 1.5.1
 
-## Building the Debian Package (`.deb`)
+## Build your debian pacakges
 
-1. **Clone the Repository:**
-    ```bash
-    cd ~/
-    git clone https://github.com/OUXT-Polaris/ros2_pkg_builder.git
-    ```
+Prepare repos file for your workspace.
 
-2. **Create Base Image:**
-    ```bash
-    cd ~/ros2_pkg_builder/docker/base
-    docker build -t builder .
-    ```
+### Command Usage
+```bash
+build_deb_packages --help
 
-3. **Create and Configure `.repos` File:**
-    ```bash
-    cd ~/ros2_pkg_builder/docker/build/
-    touch workspace.repos
-    ```
-    Add the following content to the `workspace.repos` file (this is just an example):
-    ```yaml
-    # example workspace.repos
-    repositories:
-      message/roboware_msg:
-        type: git
-        url: https://github.com/hakoroboken/roboware_msg.git
-        version: main
-    ```
+usage: build_deb_packages [-h] [--repos REPOS] {amd64,arm64} {rolling,iron,humble}
 
-4. **Generate the `.deb` Package:**
-    ```bash
-    cd ~/ros2_pkg_builder/docker/build/
-    chmod +x ./*.sh
-    ./run.sh
-    ```
+Building debian packages
+
+positional arguments:
+  {amd64,arm64}
+  {rolling,iron,humble}
+
+options:
+  -h, --help            show this help message and exit
+  --repos REPOS         repos file for your workspace
+```
