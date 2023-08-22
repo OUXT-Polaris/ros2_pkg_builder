@@ -75,7 +75,7 @@ def main():
     parser.add_argument(
         "--packages-above",
         type=str,
-        default="$(colcon list -n | tr '\n' ' ')",
+        default="",
         help="List of build target packages.",
     )
     args = parser.parse_args()
