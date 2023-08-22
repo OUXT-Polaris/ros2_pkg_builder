@@ -3,7 +3,8 @@ import os
 import shutil
 from pathlib import Path
 
-import docker
+from python_on_whales import docker
+
 import ros2_pkg_builder
 
 
@@ -18,23 +19,14 @@ def build_deb_packages(architecture: str, rosdistro: str, repos_file: str):
         Path(architecture).joinpath("update_apt_repo.sh"),
     )
     shutil.copyfile(repos_file, Path(architecture).joinpath("workspace.repos"))
-    client = docker.from_env()
-    container = client.containers.run(
+    docker.run(
         image="wamvtan/ros2_pkg_builder:" + rosdistro,
-        volumes={
-            Path(architecture).absolute(): {
-                "bind": "/artifacts",
-                "mode": "rw",
-            },
-        },
-        detach=True,
+        volumes=[(Path(architecture).absolute(), "/artifacts")],
         remove=True,
         platform=architecture,
-        environment={"PACKAGES_UP_TO": "$(colcon list -n | tr '\n' ' ')"},
+        envs={"PACKAGES_UP_TO": "$(colcon list -n | tr '\n' ' ')"},
+        tty=True,
     )
-    output = container.attach(stdout=True, stream=True, logs=True)
-    for line in output:
-        print(line)
 
 
 def main():
