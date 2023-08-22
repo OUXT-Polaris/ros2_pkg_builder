@@ -11,10 +11,12 @@ rosdep update
 
 cd /artifacts && sh update_apt_repo.sh
 
-cd /workspace && colcon list -t -p --packages-up-to $PACKAGES_UP_TO | xargs -I{} bash -c \
+dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-$ARCHITECTURE/ros-${ROS_DISTRO}-*.deb
+
+cd /workspace && colcon list -t -p --packages-above $PACKAGES_ABOVE | xargs -I{} bash -c \
     'echo {} && cd {} && \
     bloom-generate rosdebian --os-name ubuntu --os-version $DEB_DISTRO --ros-distro $ROS_DISTRO && \
     fakeroot debian/rules binary && cd /artifacts && sh update_apt_repo.sh && \
-    dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-amd64/*.deb'
+    dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-$ARCHITECTURE/ros-$ROS_DISTRO-*.deb'
 
 echo $?

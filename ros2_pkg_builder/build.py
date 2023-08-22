@@ -9,7 +9,11 @@ import ros2_pkg_builder
 
 
 def build_deb_packages(
-    architecture: str, rosdistro: str, repos_file: str, build_builder_image: bool
+    architecture: str,
+    rosdistro: str,
+    repos_file: str,
+    build_builder_image: bool,
+    packages_above: str,
 ) -> None:
     output_directory = Path(architecture).joinpath("rosdep")
     if not os.path.exists(output_directory):
@@ -39,8 +43,8 @@ def build_deb_packages(
         image="wamvtan/ros2_pkg_builder:" + rosdistro,
         volumes=[(Path(architecture).absolute(), "/artifacts")],
         remove=True,
-        platform=architecture,
-        envs={"PACKAGES_UP_TO": "$(colcon list -n | tr '\n' ' ')"},
+        platform="linux/" + architecture,
+        envs={"PACKAGES_ABOVE": packages_above, "ARCHITECTURE": architecture},
         tty=True,
     )
 
@@ -64,13 +68,23 @@ def main():
         default="workspace.repos",
     )
     parser.add_argument(
-        "--build_builder_image",
+        "--build-builder-image",
         action="store_true",
         help="If true, build builder images in your local machine.",
     )
+    parser.add_argument(
+        "--packages-above",
+        type=str,
+        default="$(colcon list -n | tr '\n' ' ')",
+        help="List of build target packages.",
+    )
     args = parser.parse_args()
     build_deb_packages(
-        args.architecture, args.rosdistro, args.repos, args.build_builder_image
+        args.architecture,
+        args.rosdistro,
+        args.repos,
+        args.build_builder_image,
+        args.packages_above,
     )
 
 
