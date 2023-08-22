@@ -31,9 +31,9 @@ jobs:
         uses: docker/bake-action@v3
         with:
           push: true
-          workdir: docker
+          workdir: ros2_pkg_builder/docker
           files: |
-            ./ros2_pkg_builder/docker/docker-bake.hcl
+            ./docker-bake.hcl
   build_python_packages:
     strategy:
       fail-fast: false
