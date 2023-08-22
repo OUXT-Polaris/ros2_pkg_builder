@@ -21,17 +21,20 @@ Prepare repos file for your workspace.
 
 ### Command Usage
 ```bash
-build_deb_packages --help
-
-usage: build_deb_packages [-h] [--repos REPOS] {amd64,arm64} {rolling,iron,humble}
+usage: build_deb_packages [-h] [--repos REPOS] [--build-builder-image] [--packages-above PACKAGES_ABOVE] {amd64,arm64} {rolling,iron,humble}
 
 Building debian packages
 
 positional arguments:
-  {amd64,arm64}
+  {amd64,arm64}         Target CPU architecture.
   {rolling,iron,humble}
+                        Target ROS 2 distribution.
 
 options:
   -h, --help            show this help message and exit
   --repos REPOS         repos file for your workspace
+  --build-builder-image
+                        If true, build builder images in your local machine.
+  --packages-above PACKAGES_ABOVE
+                        List of build target packages.
 ```
