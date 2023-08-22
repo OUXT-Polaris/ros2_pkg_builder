@@ -30,6 +30,7 @@ def build_deb_packages(architecture: str, rosdistro: str, repos_file: str):
         detach=True,
         remove=True,
         platform=architecture,
+        environment={"PACKAGES_UP_TO": "$(colcon list -n | tr '\n' ' ')"},
     )
     output = container.attach(stdout=True, stream=True, logs=True)
     for line in output:
