@@ -33,7 +33,7 @@ jobs:
           push: true
           workdir: docker
           files: |
-            ./docker-bake.hcl
+            ./ros2_pkg_builder/docker-bake.hcl
   build_python_packages:
     strategy:
       fail-fast: false
