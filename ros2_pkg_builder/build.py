@@ -14,6 +14,7 @@ def build_deb_packages(
     repos_file: str,
     build_builder_image: bool,
     packages_above: str,
+    clean_apt_cache: bool,
 ) -> None:
     output_directory = Path(architecture).joinpath("rosdep")
     if not os.path.exists(output_directory):
@@ -41,7 +42,9 @@ def build_deb_packages(
         )
     docker.run(
         image="wamvtan/ros2_pkg_builder:" + rosdistro,
-        volumes=[(Path(architecture).absolute(), "/artifacts")],
+        volumes=[
+            (Path(architecture).absolute(), "/artifacts"),
+        ],
         remove=True,
         platform="linux/" + architecture,
         envs={"PACKAGES_ABOVE": packages_above, "ARCHITECTURE": architecture},
