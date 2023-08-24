@@ -15,6 +15,7 @@ def build_deb_packages(
     build_builder_image: bool,
     packages_above: str,
     apt_server: str,
+    cacher_image_name: str,
 ) -> None:
     output_directory = Path(architecture).joinpath("rosdep")
     if not os.path.exists(output_directory):
@@ -26,9 +27,15 @@ def build_deb_packages(
         Path(architecture).joinpath("update_apt_repo.sh"),
     )
     shutil.copyfile(repos_file, Path(architecture).joinpath("workspace.repos"))
+    shutil.copyfile(
+        repos_file,
+        Path(ros2_pkg_builder.__path__[0])
+        .joinpath("docker")
+        .joinpath("workspace.repos"),
+    )
     if build_builder_image:
         docker.buildx.bake(
-            [rosdistro],
+            targets=[rosdistro],
             load=True,
             set={
                 "*.platform": "linux/" + architecture,
@@ -40,20 +47,34 @@ def build_deb_packages(
                 .joinpath("docker-bake.hcl")
             ],
         )
-    docker.run(
-        image="wamvtan/ros2_pkg_builder:" + rosdistro,
-        volumes=[
-            (Path(architecture).absolute(), "/artifacts"),
-        ],
-        remove=False,
-        platform="linux/" + architecture,
-        envs={
-            "PACKAGES_ABOVE": packages_above,
-            "ARCHITECTURE": architecture,
-            "APT_SERVER": apt_server,
-        },
-        tty=True,
-    )
+        docker.buildx.bake(
+            targets=[rosdistro, rosdistro + "-cacher"],
+            load=True,
+            set={
+                "*.platform": "linux/" + architecture,
+                "*.context": Path(ros2_pkg_builder.__path__[0]).joinpath("docker"),
+                "*.tags": cacher_image_name + ":" + rosdistro,
+            },
+            files=[
+                Path(ros2_pkg_builder.__path__[0])
+                .joinpath("docker")
+                .joinpath("docker-bake.hcl")
+            ],
+        )
+    # docker.run(
+    #     image="wamvtan/ros2_pkg_builder:" + rosdistro,
+    #     volumes=[
+    #         (Path(architecture).absolute(), "/artifacts"),
+    #     ],
+    #     remove=False,
+    #     platform="linux/" + architecture,
+    #     envs={
+    #         "PACKAGES_ABOVE": packages_above,
+    #         "ARCHITECTURE": architecture,
+    #         "APT_SERVER": apt_server,
+    #     },
+    #     tty=True,
+    # )
 
 
 def main():
@@ -86,6 +107,11 @@ def main():
         help="List of build target packages.",
     )
     parser.add_argument("--apt-server", type=str, default="ftp.jaist.ac.jp/pub/Linux")
+    parser.add_argument(
+        "--cacher-image-name",
+        type=str,
+        default="docker.io/wamvtan/ros2_pkg_builder_cacher",
+    )
     args = parser.parse_args()
     build_deb_packages(
         args.architecture,
@@ -94,6 +120,7 @@ def main():
         args.build_builder_image,
         args.packages_above,
         args.apt_server,
+        args.cacher_image_name,
     )
 
 

@@ -39,22 +39,22 @@ target "humble" {
 target "latest-cacher" {
   inherits = ["latest"]
   target = "build-cacher-stage"
-  docker = "Dockerfile.cacher"
-  tags = ["docker.io/wamvtan/ros2_pkg_builder:cacher_latest"]
+  dockerfile = "Dockerfile.cacher"
+  tags = ["docker.io/wamvtan/ros2_pkg_builder_cacher:latest"]
   platforms = ["linux/amd64"] #, "linux/arm64/v8"] // Some apt packages are not supported in arm.
 }
 
 target "rolling-cacher" {
   inherits = ["latest-cacher"]
-  tags = ["docker.io/wamvtan/ros2_pkg_builder:cacher_rolling"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder_cacher:rolling"]
 }
 
 target "iron-cacher" {
   inherits = ["latest-cacher"]
-  tags = ["docker.io/wamvtan/ros2_pkg_builder:cacher_iron"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder_cacher:iron"]
 }
 
 target "humble-cacher" {
   inherits = ["latest-cacher"]
-  tags = ["docker.io/wamvtan/ros2_pkg_builder:cacher_humble"]
+  tags = ["docker.io/wamvtan/ros2_pkg_builder_cacher:humble"]
 }
