@@ -14,7 +14,7 @@ def build_deb_packages(
     repos_file: str,
     build_builder_image: bool,
     packages_above: str,
-    clean_apt_cache: bool,
+    apt_server: str,
 ) -> None:
     output_directory = Path(architecture).joinpath("rosdep")
     if not os.path.exists(output_directory):
@@ -45,9 +45,13 @@ def build_deb_packages(
         volumes=[
             (Path(architecture).absolute(), "/artifacts"),
         ],
-        remove=True,
+        remove=False,
         platform="linux/" + architecture,
-        envs={"PACKAGES_ABOVE": packages_above, "ARCHITECTURE": architecture},
+        envs={
+            "PACKAGES_ABOVE": packages_above,
+            "ARCHITECTURE": architecture,
+            "APT_SERVER": apt_server,
+        },
         tty=True,
     )
 
@@ -81,6 +85,7 @@ def main():
         default="",
         help="List of build target packages.",
     )
+    parser.add_argument("--apt-server", type=str, default="ftp.jaist.ac.jp/pub/Linux")
     args = parser.parse_args()
     build_deb_packages(
         args.architecture,
@@ -88,6 +93,7 @@ def main():
         args.repos,
         args.build_builder_image,
         args.packages_above,
+        args.apt_server,
     )
 
 

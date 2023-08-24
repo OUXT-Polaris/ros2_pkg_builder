@@ -2,3 +2,4 @@ workspace.repos
 amd64
 arm64
 __pycache__
+*.tar
