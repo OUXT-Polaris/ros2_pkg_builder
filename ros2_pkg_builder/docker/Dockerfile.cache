@@ -6,7 +6,7 @@ WORKDIR /workspace
 RUN echo "repositories:" >> workspace.repos
 
 ARG REPOS_FILE=workspace.repos
-COPY workspace.repos workspace.repos
+ADD ${REPOS_FILE} workspace.repos
 
 ARG APT_SERVER=ftp.jaist.ac.jp/pub/Linux
 RUN sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list

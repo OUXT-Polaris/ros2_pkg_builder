@@ -46,7 +46,8 @@ target "cache-latest" {
   dockerfile = "Dockerfile.cache"
   tags = ["docker.io/wamvtan/robotx_buildfarm:latest"]
   args = {
-    "ROS_DISTRO" : "latest"
+    "ROS_DISTRO" : "latest",
+    "REPOS_FILE" : "https://raw.githubusercontent.com/OUXT-Polaris/ros2_pkg_builder/ouxt/repos/workspace.repos"
   }
   platforms = ["linux/amd64", "linux/arm64/v8"]
 }
