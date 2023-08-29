@@ -1,0 +1,823 @@
+Package: ros-humble-behavior-tree-action-builder
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 48
+Depends: ros-humble-behaviortree-cpp-v3, ros-humble-rclcpp
+Filename: dists/jammy/universe/binary-amd64/ros-humble-behavior-tree-action-builder_0.0.0-0jammy_amd64.deb
+Size: 6248
+MD5sum: c4a6628c9e35f88a57e3a37552397aec
+SHA1: afec5af566038c968bc5fb0f4953601bec9720a5
+SHA256: e56f472b1e49d34a3f654672ed51dc95135b479a0ad49d4fdf39d6ccf015db24
+SHA512: dde5cb3d8739920255da0ee06f260071d09314a7293b92da975b4343297d5cb90dc80f674228d1050f011464389c6bbdbffb90062a3d3f09d4fe52fd04b56348
+Description: Utility functions for building behavior tree action
+
+Package: ros-humble-boost-geometry-util
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 80
+Depends: libc6 (>= 2.4), libboost-all-dev, ros-humble-geometry-msgs, ros-humble-rclcpp
+Filename: dists/jammy/universe/binary-amd64/ros-humble-boost-geometry-util_0.0.1-0jammy_amd64.deb
+Size: 10534
+MD5sum: cdb49768d3c094f43acbffcb0b6ca39a
+SHA1: 7b20f41d061a92f080913dbd31b2d43822f44638
+SHA256: 0f97a52b3146b41574f487211116d0f64f371fdb05d3bfb18ebfd1d575fa3db1
+SHA512: 962f0978a672af21776c4f04a0688e692f51eaff7c22c648b3c84ab89d02ff6304fd3df9ddcf4d31f55d4b48d623d537f68e94ce0607d99bd3355afcda4d5103
+Description: Utility library for boost geometry
+
+Package: ros-humble-data-buffer
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: Masaya Kataoka <ms.kataoka@gmail.com>
+Installed-Size: 53
+Depends: ros-humble-rclcpp
+Filename: dists/jammy/universe/binary-amd64/ros-humble-data-buffer_0.0.1-0jammy_amd64.deb
+Size: 7608
+MD5sum: 4f30494c962dbfc9c97bf69092c327d1
+SHA1: 711fcaa766396c1f8da6edaaf449399039a23e51
+SHA256: 7737975248c3a86067ba68d08dcd482b2bc22c416375ef14557c8145c18731f4
+SHA512: fc1dc9eee8a80c6531b1f3734428441f3eaed551999efa3763f923036f402f55552f7e86f96a39973532dfe374ad14bbbd34f23ff5baf0dabe3f4f8e4f5c7d6e
+Description: The data_buffer package
+
+Package: ros-humble-dynamixel-hardware-interface
+Architecture: amd64
+Version: 0.0.3-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 4395
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-controller-interface, ros-humble-diagnostic-msgs, ros-humble-diagnostic-updater, ros-humble-dynamixel-sdk, ros-humble-hardware-interface, ros-humble-pluginlib, ros-humble-rclcpp, ros-humble-realtime-tools, ros-humble-robot-state-publisher, ros-humble-ros2-control, ros-humble-xacro
+Filename: dists/jammy/universe/binary-amd64/ros-humble-dynamixel-hardware-interface_0.0.3-0jammy_amd64.deb
+Size: 904888
+MD5sum: 5578e4bd0d7b9297cf20bf97a80adc34
+SHA1: 91fc7c4b2bd6a911c92b46752938a601acdcfd32
+SHA256: 50d9a92b00e717590cbd872aefa34c9419d77f47a3ab17d2ccbb909223545c72
+SHA512: ba5a8317f0b0ed86a9dc2c022007c557092bbd6c0cc0518e15b9051fc13b38fb3c026d55ce5f2c34f79f05328c3e7cee1210a8114f909610386015c50e49074c
+Description: Hardware Interface and controllers for dynamixel motors
+
+Package: ros-humble-geodesy
+Architecture: amd64
+Version: 1.0.4-0jammy
+Priority: optional
+Section: misc
+Maintainer: Jack O'Quin <jack.oquin@gmail.com>
+Installed-Size: 129
+Depends: python3-pyproj, ros-humble-angles, ros-humble-geographic-msgs, ros-humble-geometry-msgs, ros-humble-sensor-msgs, ros-humble-unique-identifier-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-geodesy_1.0.4-0jammy_amd64.deb
+Size: 21426
+MD5sum: 6ef1c1ff94ea6cd177f0b314ef37ea6a
+SHA1: 2b7632a50e0492ef8c5d07df18fd021ab506f6ef
+SHA256: 6e2aeb79d5f01ab90abca277c63f8fc13cef1288952e3f1cf3e5d22b4fdf20cb
+SHA512: de66372541a360cbdffa3d31e38dd621e87776ba12987463c3b26c9896e1b9b43a5ce2f815231de35fc41f37a1e8557a4aa3073c2d0284ca92674993924ddcca
+Homepage: http://wiki.ros.org/geodesy
+Description: Python and C++ interfaces for manipulating geodetic coordinates.
+
+Package: ros-humble-geographic-conversion
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 1476
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-geodesy, ros-humble-geographic-msgs, ros-humble-geometry-msgs, ros-humble-nav-msgs, ros-humble-rclcpp, ros-humble-sensor-msgs, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros
+Filename: dists/jammy/universe/binary-amd64/ros-humble-geographic-conversion_0.0.0-0jammy_amd64.deb
+Size: 202766
+MD5sum: 5eb1fef0259896b2426ed507c9d04cfe
+SHA1: d789ea73af562c2bf857ded0a6951d4a50e91d2b
+SHA256: 25c75f6d6f4f168810907608bd5948e49103cd0508fbb2853f3431cca15dfcc0
+SHA512: 8db23f8018547a2e17bd2331d2a488e6652f60c8f915a1da7d00a0ddd7a9910c06b2c7e9f869c809f4f00912de0a02f512ef8f3f9f92b47fea25eebb497acea5
+Description: The geographic_conversion package
+
+Package: ros-humble-geographic-info
+Architecture: amd64
+Version: 1.0.4-0jammy
+Priority: optional
+Section: misc
+Maintainer: Jack O'Quin <jack.oquin@gmail.com>
+Installed-Size: 41
+Depends: ros-humble-geodesy, ros-humble-geographic-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-geographic-info_1.0.4-0jammy_amd64.deb
+Size: 5262
+MD5sum: 4110d96c0346c1cfe9f2e605623add74
+SHA1: d267394aee7c3b564546130f375561394b8a98cc
+SHA256: 9df006748d78fd537fbf9834d5ddb9a39c15108e653a1e9af90dea00e29d6f8d
+SHA512: 75c5362a1859ba4f80c08156eb33ebd0bd2149523b7ee08ab4871040254acb915f5c2f6b31034606be4a7f57facd9f71d7a19c27c6d94e290308a61dd789e188
+Homepage: http://wiki.ros.org/geographic_info
+Description: Geographic information metapackage.
+ Not needed for wet packages, use only to resolve dry stack dependencies.
+
+Package: ros-humble-geographic-msgs
+Architecture: amd64
+Version: 1.0.4-0jammy
+Priority: optional
+Section: misc
+Maintainer: Jack O'Quin <jack.oquin@gmail.com>
+Installed-Size: 2866
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 11), ros-humble-fastcdr, ros-humble-geometry-msgs, ros-humble-rosidl-default-runtime, ros-humble-std-msgs, ros-humble-unique-identifier-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-geographic-msgs_1.0.4-0jammy_amd64.deb
+Size: 191184
+MD5sum: 5ec36798d1d40743afb17bc18d7c9078
+SHA1: 5f148886642eabcd2dbb77f7317d5cd79bc799f0
+SHA256: 9a5b8120aeb4ff80d42a0f08e72bf8a1a97bd90c3d7c664e8372d9865cb91966
+SHA512: 9e2b1619842ed0329c11705c11cf0093b1392103c55242f7f01c549e0f9b0f5e8fba9f308b0d1b9e72498e198fd73fe1496703cc261a958706d4807ea3bd0d38
+Homepage: http://wiki.ros.org/geographic_msgs
+Description: ROS messages for Geographic Information Systems.
+
+Package: ros-humble-geometry-msgs-data-buffer
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Masaya Kataoka <ms.kataoka@gmail.com>
+Installed-Size: 97
+Depends: libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2), libeigen3-dev, ros-humble-data-buffer, ros-humble-geometry-msgs, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-tf2-ros
+Filename: dists/jammy/universe/binary-amd64/ros-humble-geometry-msgs-data-buffer_0.0.0-0jammy_amd64.deb
+Size: 16782
+MD5sum: 29345c74ac11bac77c443e67904b3b68
+SHA1: 21d2eabf4f33b8741b7e82bad097afe9fd488505
+SHA256: 610064269359ac93dcbef9a670c7d85625c074162958cfb829e96b170aaf60a6
+SHA512: 85dbe8cd694e83ffea605d280e51d21e2ca9c66932cc55b604b8b3298753374b55a030dfcbb887c89f58c8c98cd2c2c8811f858984c341cd167751b6df15da76
+Description: The geometry_msgs_data_buffer package
+
+Package: ros-humble-hermite-path-msgs
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 781
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 5.2), ros-humble-fastcdr, ros-humble-builtin-interfaces, ros-humble-geometry-msgs, ros-humble-rosidl-default-runtime, ros-humble-std-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-hermite-path-msgs_0.0.0-0jammy_amd64.deb
+Size: 67420
+MD5sum: 8c86c61062de0cb7321af228146d4067
+SHA1: c5475374e5e91cc3d53a28d7bbd2a29e9865c570
+SHA256: 447f32614d03fe629e6925f868bd652715ee0c2bea8ff4b92717b6551c0b6d01
+SHA512: f3d3f6695f912e623d337aea145ae0bc9b14d135e0842e8c3dfab09220033f324e1e93ef5b868d21aa14454dc7410d8513faa350c364167596069cd59c7731db
+Description: message definitions for hermite path planner
+
+Package: ros-humble-hermite-path-planner-bringup
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 86
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libgoogle-glog0v5 (>= 0.5.0+really0.4.0), libstdc++6 (>= 5.2), libboost-all-dev, libeigen3-dev, libgoogle-glog-dev, ros-humble-ament-cmake-auto, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-hermite-path-planner, ros-humble-local-waypoint-server, ros-humble-pure-pursuit-planner, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-velocity-planner, ros-humble-visualization-msgs, util-linux
+Filename: dists/jammy/universe/binary-amd64/ros-humble-hermite-path-planner-bringup_0.0.0-0jammy_amd64.deb
+Size: 14254
+MD5sum: d521084399e3ef7325be2a0c62ce9f58
+SHA1: c65a6f6fbd8d9a8eae3dffabaabcfc5769387079
+SHA256: 2f7b9071a4ef8477c509f9654c5f49129da2be781d772334570d0cbdf67eba64
+SHA512: 5227096551dfa3441334221af74b3f0f0d95c75ea3fda1a06f632a41e653279ad70930d9ca4f59cdde0659087785e4c13fdb251609246e2362102c5ae7c481d2
+Description: Bringup package for hermite_path_planner
+
+Package: ros-humble-hermite-path-planner
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 718
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, ros-humble-ament-cmake-auto, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-std-msgs, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-hermite-path-planner_0.0.0-0jammy_amd64.deb
+Size: 153986
+MD5sum: 40622bca2907fe604460edb1c07e201b
+SHA1: 9ff291310e183b63d215d361024350c2b8efd53c
+SHA256: 59d191d7440da08fc1e51e698c36df803303d053035140e341ff5c4b836e7621
+SHA512: 2c04bd7b6090bd9f907247174c9a4bd402c759755be0f35f8f14c76e9d244d2cad7a465dfc1aa196c9618936b989710b692c95b6f45ac92466903598994fe0a3
+Description: TODO: Package description
+
+Package: ros-humble-hungarian-solver
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 93
+Depends: libeigen3-dev, ros-humble-rclcpp
+Filename: dists/jammy/universe/binary-amd64/ros-humble-hungarian-solver_0.0.0-0jammy_amd64.deb
+Size: 19068
+MD5sum: f05e8f49e204dda300b573c473e588f7
+SHA1: 185007dcaaf6c4c498db794cc932286bdf6b4b7a
+SHA256: db46e17b5c36ee6c652c2ac0c6b1593b43e18667fbed3c5ce2602bf858441cf8
+SHA512: b7e6d3b83b016cded6e3b5618d5b46e0780ad303428c515d6f62353d8c159332b01ba2cfeb6e047dc897a97fc67a52b57f9892e6f67c335f32c43a2c20113561
+Description: The hungarian_solver package
+
+Package: ros-humble-image-processing-utils
+Architecture: amd64
+Version: 0.0.2-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 631
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libopencv-core4.5d (>= 4.5.4+dfsg), libopencv-flann4.5d (>= 4.5.4+dfsg), libopencv-imgcodecs4.5d (>= 4.5.4+dfsg), libopencv-imgproc4.5d (>= 4.5.4+dfsg), libstdc++6 (>= 11), ros-humble-cv-bridge, ros-humble-image-geometry, ros-humble-image-transport, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-image-processing-utils_0.0.2-0jammy_amd64.deb
+Size: 123394
+MD5sum: 9e6de95eab002aa452e0a7c23d92b8bc
+SHA1: 4e384ee6b1d5ac2383893e404fb9fc6dc4d47b7f
+SHA256: 2ed36e98953c4b8b679478f3a0e9003509f5db64ef8c0fc2081e946c9e3b0b0d
+SHA512: a17a71b05910cf23ab0effc08d2694084773486c8058ad4d22ee56dfb6118af28ad2aea92767e6745ddee083b5d922035696ae6563942806abec95a256287eac
+Description: ROS2 packages for image processing utility
+
+Package: ros-humble-joy-to-twist
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2), ros-humble-geometry-msgs, ros-humble-joy, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-joy-to-twist_0.0.0-0jammy_amd64.deb
+Size: 9774
+MD5sum: b58caa30de39e66bfea19bae2410b0da
+SHA1: 174a928e4edc83aa13256894fb56ba43c6a7575b
+SHA256: b398ecf8b3d0c2551bb321b2fa9ca5061a1e892c0b992a696648854e170b77c8
+SHA512: be37f6b18c95f3c97d00b536018e39d54df4670cb764af7373e5cc112cde3848456d9311417ef341c62084a3628cbd4266803cad11678291c4e1f0e6d3c8fc05
+Description: TODO: Package description
+
+Package: ros-humble-lidar-camera-fusion
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: maleicacid <maleicacid824+dev@gmail.com>
+Installed-Size: 917
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-message-synchronizer, ros-humble-rclcpp, ros-humble-rclcpp-components
+Filename: dists/jammy/universe/binary-amd64/ros-humble-lidar-camera-fusion_0.0.0-0jammy_amd64.deb
+Size: 249042
+MD5sum: d8bf87987e1e8388bb975115b453e3bf
+SHA1: c2b3d83ff70152141cad5b3e6e998173c01028e2
+SHA256: 2194cb3e5212b73c733465b86c92d8bf2a43a5352e03844aa44e3c4d6bafcad3
+SHA512: 333c1c3f92f2c0ddb98ed7b02b3726bc1fe4c578314f310155b303ee79a7d4920207faf7f7b44f952cb18eca50659bcb8b5ca86db8ba2f7c31e56f51b57fb273
+Description: TODO: Package description
+
+Package: ros-humble-local-waypoint-server
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 1097
+Depends: libc6 (>= 2.35), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, ros-humble-ament-cmake-auto, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-hermite-path-planner, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-local-waypoint-server_0.0.0-0jammy_amd64.deb
+Size: 179654
+MD5sum: b83bc089dcdc6d80e8fe4c2862775d2f
+SHA1: 0385aee05b8c2225d71ffb03ac677cc7a524c165
+SHA256: e1cc532b020df03cf7caf754181055c2f5e2fb992b07ab6148648643cbc2aa54
+SHA512: 33e22ada702b41992194b69b21b21b5c6ed870c5531f52058918f12eb452f2c57243673f80f7f6e602f427d37ccf36e41e56474b80ed5f4dbd8a99e7447123bf
+Description: ROS2 packages provide local waypoint for obstacle avoidance.
+
+Package: ros-humble-lua-vendor
+Architecture: amd64
+Version: 0.0.2-0jammy
+Priority: optional
+Section: misc
+Maintainer: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>
+Installed-Size: 6626
+Depends: libc6 (>= 2.14)
+Filename: dists/jammy/universe/binary-amd64/ros-humble-lua-vendor_0.0.2-0jammy_amd64.deb
+Size: 2607262
+MD5sum: 9be7963f46b7dd29ef46d756c24cd0b1
+SHA1: 7c449e29a7e3fe391bfd91e715509f916fae633d
+SHA256: 8121e0caefb5e6d576d7c68d707816875e2d3c29c2c5c3b36c784bd6d1004c46
+SHA512: 874d6339d65b501754d295b1009c567586b88a54bc6db420f6b96ac02159d3a5c870372c80173003fa58f4976aa7f8148b6fb1dcce021a53192a2c330002eaaa
+Description: TODO: Package description
+
+Package: ros-humble-message-synchronizer
+Architecture: amd64
+Version: 0.0.2-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 362
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-rclcpp, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-message-synchronizer_0.0.2-0jammy_amd64.deb
+Size: 94548
+MD5sum: c4c0f0b78f56ffee591c19ea77347274
+SHA1: e6af3332c486fe25bb4e8e5eafe06f087c54ea07
+SHA256: d7d9745565ca022bb05840fac470a2f25484cee6d5827b8d4b50ad50c6a8245a
+SHA512: 81c88dc063ef6c2c699d1b11f3837b7bb39ea0c84a19c0042caecb20a14275ed19b54344eef63f0eae4d72c66ee0c678eb1108a21358f137d8bce324f813eb91
+Description: ROS2 package for synchronizing messages
+
+Package: ros-humble-miniv-control
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 201
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), nlohmann-json3-dev, ros-humble-hardware-interface, ros-humble-pluginlib, ros-humble-rclcpp, ros-humble-ros2-control, ros-humble-tcp-sender, ros-humble-xacro
+Filename: dists/jammy/universe/binary-amd64/ros-humble-miniv-control_0.0.0-0jammy_amd64.deb
+Size: 59620
+MD5sum: f67611011aabd6ea66ea65bf92f3e529
+SHA1: 0a1d8f1255715453b7596e1e7ddeab43a3b0f19c
+SHA256: 386a86f55945e97fcc1286d3871c10e88908a045078d33d1a3e21a080cb599bb
+SHA512: 168875d118792f7a35f214fec7821519c5cd6cb468db6c0d2857663085d0e41ec2263632e21c884e66b627e6d7789393128484c6d0f1062a23a930e3b7cf7ed2
+Description: ROS2 hardware interface for miniv
+
+Package: ros-humble-miniv-description
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 4891
+Depends: ros-humble-joy, ros-humble-miniv-control, ros-humble-robot-state-publisher, ros-humble-rviz2, ros-humble-usv-controller, ros-humble-xacro
+Filename: dists/jammy/universe/binary-amd64/ros-humble-miniv-description_0.0.0-0jammy_amd64.deb
+Size: 971424
+MD5sum: 583966ba3858460e50b41761a3aab8db
+SHA1: 8178782df41754178454a504fd96a7fa3d1d2993
+SHA256: a080b5fd986d63d8fc045bb6d05b5e8cb40ca2b04491cbc8bf26078fc7707d7d
+SHA512: e900b980fed92caa7f7c72820fce9d655a442e12075cf80458b0850923df6d3efdf56f835e8b1e1458987fb99e784cba574327a70835af2f0daa19a201c31218
+Description: Robot description for Mini-V
+
+Package: ros-humble-mock-server
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 58
+Depends: libc6 (>= 2.34)
+Filename: dists/jammy/universe/binary-amd64/ros-humble-mock-server_0.0.0-0jammy_amd64.deb
+Size: 7118
+MD5sum: 28a0116c0ef4cb98a9b44862fb0659e4
+SHA1: 6fa50eb34276fbe0f9adc8fee44d43ed1a31d4af
+SHA256: 0b8ed592064fc5c2d52367a599f35e053d23dd6d2b97070df2ad868d43847cfc
+SHA512: 7beb33cfe7f68d8acd193c89d6c3d58adf3b9ec49ea211cd21dabb0b7e5ffb9b05f31f404ca873190836586b6aeb04e0e9eacefda31ee390f30f2310b43cfc66
+Description: TODO: Package description
+
+Package: ros-humble-ndt-omp
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: koide <koide@aisl.cs.tut.ac.jp>
+Installed-Size: 1149
+Depends: libc6 (>= 2.32), libgcc-s1 (>= 3.0), libgomp1 (>= 6), libpcl-common1.12 (>= 1.12.1+dfsg), libpcl-filters1.12 (>= 1.12.1+dfsg), libpcl-kdtree1.12 (>= 1.12.1+dfsg), libpcl-search1.12 (>= 1.12.1+dfsg), libstdc++6 (>= 11), libpcl-dev
+Filename: dists/jammy/universe/binary-amd64/ros-humble-ndt-omp_0.0.0-0jammy_amd64.deb
+Size: 239938
+MD5sum: 7587c0ac97f3dba3581e0a328b6a835a
+SHA1: c4ed98143923971e1662c384289ee1e87298b6ea
+SHA256: 38162075dbfe3f5f20dc45c38ccff1fbb17bbd9b872e1be01ec7752990872523
+SHA512: 34f579577c92e5b37d40f89dc147632bf36208adaa8a0185f22165152e90e425cd515c1f040ea0376b5c1ffb7e12f451319d16f20a5949f137d97bdb6036908c
+Description: OpenMP boosted NDT and GICP algorithms
+
+Package: ros-humble-nmea-gps-driver
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 421
+Depends: libboost-thread1.74.0 (>= 1.74.0), libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-nmea-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components
+Filename: dists/jammy/universe/binary-amd64/ros-humble-nmea-gps-driver_0.0.0-0jammy_amd64.deb
+Size: 109316
+MD5sum: e45da4637fcca4fa7b76b40085acc59a
+SHA1: b52e41d3175728db6ae28dc700ef544cf46d556f
+SHA256: 1f1616ddc129b56d6827d1a100f5730e7401c62f3f3bac20bab1156344aba4b7
+SHA512: d822b88a100e8e7de779e5b465da1fdd68ecac969dc5e7f71196e629eaf2ffcf84d5c8a3a30af3088df21d6a4320af83bc63ba1c92afb1263051a709c2812dcb
+Description: Device driver package for nmea GPS
+
+Package: ros-humble-nmea-hardware-interface
+Architecture: amd64
+Version: 0.0.2-0jammy
+Priority: optional
+Section: misc
+Maintainer: kenta <kenntabsk@gmail.com>
+Installed-Size: 451
+Depends: libboost-thread1.74.0 (>= 1.74.0), libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, libgtk-3-dev, pkg-config, ros-humble-controller-interface, ros-humble-diagnostic-msgs, ros-humble-geographic-msgs, ros-humble-hardware-interface, ros-humble-nmea-msgs, ros-humble-pluginlib, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-realtime-tools, ros-humble-ros2-control, ros-humble-rviz2
+Filename: dists/jammy/universe/binary-amd64/ros-humble-nmea-hardware-interface_0.0.2-0jammy_amd64.deb
+Size: 121108
+MD5sum: 1d18c58231d7d4731c4cce7a72150f8c
+SHA1: 9d4fbf7ab5b4dcc5cf9bbb74513484b4bb3cde9c
+SHA256: 238bb59b391220cda53ba95b721f663eef7089dc64f1b6a40d475c22cfba6d92
+SHA512: 4ec1e01b8f0501be94af13458b1f04eeb004f1e3445645e1f29649fdc2ddbca9b2e03d2229e266756da13f884e3a113877d89753df1e7c7a74b33e89741052ed
+Description: ros2 hardware interface for nmea_gps
+
+Package: ros-humble-nmea-to-geopose
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: Masaya Kataoka <ms.kataoka@gmail.com>
+Installed-Size: 542
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libgoogle-glog0v5 (>= 0.5.0+really0.4.0), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, libgoogle-glog-dev, ros-humble-geodesy, ros-humble-geographic-msgs, ros-humble-nmea-msgs, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-tf2-ros
+Filename: dists/jammy/universe/binary-amd64/ros-humble-nmea-to-geopose_0.0.1-0jammy_amd64.deb
+Size: 112952
+MD5sum: 95aa7027c04be9b1230d91380c87780b
+SHA1: a3de899d7fb993fa089eb1499514ef31137f22df
+SHA256: 12ca2d2b80944b2f13cff5997b15c0ebaebcc4389bb8b029c8cb09e647b2da56
+SHA512: f0b214b21f0d1ca66c83200bb714dd50853b6b858fe8185afea2da0db5c2e2863c4a4afbbf1c916e33bd632f5cd238fae5d6a4cb87530135449821c9961e716c
+Description: The nmea_to_geopose package
+
+Package: ros-humble-odom-frame-publisher
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya kataoka <ms.kataoka@gmail.com>
+Installed-Size: 792
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, ros-humble-geometry-msgs, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-tf2, ros-humble-tf2-geometry-msgs, ros-humble-tf2-msgs, ros-humble-tf2-ros
+Filename: dists/jammy/universe/binary-amd64/ros-humble-odom-frame-publisher_0.0.1-0jammy_amd64.deb
+Size: 136794
+MD5sum: f4fb4208381ea07700b1207b089a1a83
+SHA1: dfb5de01181d66e36c78e48f21e0a669e9dcd9d4
+SHA256: c003a142c715cf1cb83daafc1dd8a4cb322f99a7a54c06fcc5c9af9679272589
+SHA512: 4efde0b19aa5040b15385a84f7c9a93e3a9c5dbf290abde771501773e7652304b045a765992a477172cf1e705872ef4560d2dac1eb4083727cd10d77b1151ded
+Description: The odom_frame_publisher package
+
+Package: ros-humble-ouxt-common
+Architecture: amd64
+Version: 0.0.8-0jammy
+Priority: optional
+Section: misc
+Maintainer: Masaya Kataoka <ms.kataoka@gmail.com>
+Installed-Size: 41
+Depends: ros-humble-ouxt-lint-common
+Filename: dists/jammy/universe/binary-amd64/ros-humble-ouxt-common_0.0.8-0jammy_amd64.deb
+Size: 5250
+MD5sum: 4286765ff6a3c7ab2657d7d3d8a40821
+SHA1: b3e79f2cc574d68eac2e54b8dd92b50d3d5cf818
+SHA256: b239356768f844aff963f8ec8003da15aa13f8f5bd0842fd12d37c8a5ead6265
+SHA512: e14b68b826c88bff3b7c70ca4b8789c881c1fad5585f651afdf77cdbdbfd3aa194e80461ff392d426ab94d5d9d6dad0923ad023eabb181703572012152ccc75b
+Description: common settings for OUXT Polaris ROS2 packages
+
+Package: ros-humble-ouxt-lint-common
+Architecture: amd64
+Version: 0.0.8-0jammy
+Priority: optional
+Section: misc
+Maintainer: Masaya Kataoka <ms.kataoka@gmail.com>
+Installed-Size: 45
+Depends: ros-humble-ament-cmake-clang-format, ros-humble-ament-cmake-copyright, ros-humble-ament-cmake-pep257, ros-humble-ament-cmake-xmllint
+Filename: dists/jammy/universe/binary-amd64/ros-humble-ouxt-lint-common_0.0.8-0jammy_amd64.deb
+Size: 6310
+MD5sum: deb2734f1d8f7840e7edd7fd540b4957
+SHA1: 8854a0b7ad04894ee708a2b21aa2aa37e062b46f
+SHA256: 41457376788bacc74a6965a3a355dfaaf0c645a60c5f850e46a33ed4a16133cf
+SHA512: f14974b23a5a3fddf1c27635fc9e1001ca147969f6bf0d090c69def3f1b2afc3a935bbb6196b464af70b0e6543ace9e5ecd2dd752d424766001b54bcf4b9fd7b
+Description: common linter settings for OUXT Polaris ROS2 packages
+
+Package: ros-humble-pcl-apps-msgs
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 973
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 11), ros-humble-fastcdr, ros-humble-geometry-msgs, ros-humble-rosidl-default-runtime, ros-humble-sensor-msgs, ros-humble-std-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-pcl-apps-msgs_0.0.1-0jammy_amd64.deb
+Size: 82180
+MD5sum: f566479a19ac5e39195c57a8edcc10e1
+SHA1: 0180cd1f1d442c1d0604eb77de86180c8daec93e
+SHA256: 2dc34a8e9a73461502978115788929702593e2af1a34591ba18cd0fb6b4dedb4
+SHA512: a166ae7fd2f731c2417a4131573274423594f94e9f3128a5ccd2a041962ebc6d0390e67cc72bfc69758457bed2d84abaabcbc9b471d82d87cfdf35ac6dab8c72
+Description: Messages for PCL Apps
+
+Package: ros-humble-pcl-apps
+Architecture: amd64
+Version: 0.0.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 7480
+Depends: libc6 (>= 2.35), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), liblz4-1 (>= 0.0~r130), libopencv-core4.5d (>= 4.5.4+dfsg), libopencv-flann4.5d (>= 4.5.4+dfsg), liborocos-kdl1.5 (>= 1.5.1), libpcl-common1.12 (>= 1.12.1+dfsg), libpcl-features1.12 (>= 1.12.1+dfsg), libpcl-filters1.12 (>= 1.12.1+dfsg), libpcl-io1.12 (>= 1.12.1+dfsg), libpcl-kdtree1.12 (>= 1.12.1+dfsg), libpcl-search1.12 (>= 1.12.1+dfsg), libpcl-segmentation1.12 (>= 1.12.1+dfsg), libpcl-surface1.12 (>= 1.12.1+dfsg), libstdc++6 (>= 11), libboost-system-dev, libpcl-dev, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-image-geometry, ros-humble-message-filters, ros-humble-message-synchronizer, ros-humble-ndt-omp, ros-humble-pcl-apps-msgs, ros-humble-pcl-conversions, ros-humble-perception-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-std-msgs, ros-humble-tf2-eigen, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-pcl-apps_0.0.1-0jammy_amd64.deb
+Size: 1050824
+MD5sum: b7fd72e7dcbe176a794229aa784323a1
+SHA1: 4e59d15ee67d5a2c40c76ef45d761a5e88210021
+SHA256: cbd4b448a1f01cea8046905541eb6ec32f2d51df8cab134bd44bc58a7ff760ee
+SHA512: dcdc1bca0b6796e2b85b0d556f917c37937b87c733e68c71951fc4f6a471e8b334a4b70a0ebf2f48b9b8f7922e60aec28d65e55e321f26b7714012a2f5b1f32c
+Description: ROS2 Component Wrapper for PCL
+
+Package: ros-humble-perception-msgs
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: ouxt <kazukuro0824+dev@gmail.com>
+Installed-Size: 1187
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 11), ros-humble-fastcdr, ros-humble-rosidl-default-runtime, ros-humble-std-msgs, ros-humble-unique-identifier-msgs, ros-humble-vision-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-perception-msgs_0.0.0-0jammy_amd64.deb
+Size: 96110
+MD5sum: bda5d18b4002b03e837a7743b728d516
+SHA1: 6e7bae9fe0420472978742b202668b1cf176cc02
+SHA256: 814fea10d0ffe1fdf8cd06eb628c3f690a8528cf7620c98c54c262bf7899071c
+SHA512: 6b2d09798e5065aa8e55f51939a93e19c44959a3b26988d46c3db583463ec1889deabe12df47696fb18687d7deb3e15afd6287a19153b41cb8d8d92cb5590fe7
+Description: Apache-2.0
+
+Package: ros-humble-perception
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: maleicacid <maleicacid824+dev@gmail.com>
+Installed-Size: 113
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2), ros-humble-perception-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components
+Filename: dists/jammy/universe/binary-amd64/ros-humble-perception_0.0.0-0jammy_amd64.deb
+Size: 20314
+MD5sum: 1d15813eb2e4625721356ccddff77f80
+SHA1: 2bff73a945df16332c2ec7f8c2bc0dbd3eca3e52
+SHA256: 2000340d7c2ae0d93f48cd2f037f4d6c8a73b56ec3b044f01b847b366a1c20eb
+SHA512: 3240d9c06ff26b56097a234c9c82105d7f70f1e321457df7d2d46640566b746cfa140c08f5998ee42b54932dec157b45bc0c126d350578dc6b054ba89c44d0c7
+Description: TODO: Package description
+
+Package: ros-humble-playstation-controller-drivers
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 815
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-sdl2-vendor2, libboost-all-dev, ros-humble-ament-cmake-auto, ros-humble-color-names, ros-humble-joy-teleop, ros-humble-launch-xml, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-playstation-controller-drivers_0.0.0-0jammy_amd64.deb
+Size: 146614
+MD5sum: cb9b77a4399e655427cae381921ae1bb
+SHA1: 0ac83bfb611c58df54dd10bd4ec6e1fa413f1b1e
+SHA256: 73302668665653a37b819f25483838af8175ba74ecb75db7ad5eb76364e18365
+SHA512: 8bf96f71659e345313e573ecaafe5432221646260ff93f9367077cac5835460ac62d0e78f495fbcf0629a885e44e5cf92b88e7b36364dac8252073f7625ae2d8
+Description: TODO: Package description
+
+Package: ros-humble-pure-pursuit-planner
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 1298
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, ros-humble-color-names, ros-humble-hermite-path-msgs, ros-humble-hermite-path-planner, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-pure-pursuit-planner_0.0.0-0jammy_amd64.deb
+Size: 194914
+MD5sum: b57ce3df32bebfc14abaf79a4a928ece
+SHA1: d5ef9aacf2b34a7e7b8ae1a96fff948d5a9e6df5
+SHA256: d9753efb62aabbc4332a11eb04e7f943b391c96a2486bedf42150701e67ee71b
+SHA512: d0637b9cf5dfaab5d83524817850893915cc451f2bc10fdd5fdf4a00e1d7a28967dc4c9f438c2af949ebfaee1bccaacdb2d3adf45ad5c194e58bd7d46b05e583
+Description: ROS2 package for pure pursuit planner
+
+Package: ros-humble-robotx-behavior-msgs
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>
+Installed-Size: 938
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libpython3.10 (>= 3.10.0), libstdc++6 (>= 11), ros-humble-fastcdr, ros-humble-builtin-interfaces, ros-humble-rosidl-default-runtime, ros-humble-std-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-behavior-msgs_0.0.0-0jammy_amd64.deb
+Size: 79220
+MD5sum: ebbb2f7cf1d39bc688dfbb191467cde5
+SHA1: 4aeca83183b9a8b927d6b03501c575f287f20520
+SHA256: 5076ecca219f94564879c2726d213af1dbc2642a543d2b8e7da652d1534e7db8
+SHA512: 25503ba07c55e0da781e553137d9a1299b31b728afa24cb64875b0371002ced195409feec24742cf3df335db19583ea98c12ec30bc2b6099a57faf2ddda03134
+Description: messages for behavior tree
+
+Package: ros-humble-robotx-behavior-tree
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>
+Installed-Size: 942
+Depends: libc6 (>= 2.35), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-behavior-tree-action-builder, ros-humble-behaviortree-cpp-v3, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-robotx-behavior-msgs, ros-humble-tf2, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-behavior-tree_0.0.0-0jammy_amd64.deb
+Size: 203540
+MD5sum: 8574de53268b0d0e3ef780970a7725d8
+SHA1: 1ee735f21d1c03a3be1b938c1c00e65a51a3f7e5
+SHA256: 7bf7131be3cf6af1b2fb72135a548ddfdc01039f629d7fb8fe510abd5252b07e
+SHA512: 29c15af022920e224f51dd496274857ec55eb715e9af824e21bc1d72acd3ff7357a60f20fb479182463c88b27280b28ecaaf4d8d8685e740d315da4a75e033db
+Description: Implement elements of behavior tree
+
+Package: ros-humble-robotx-bt-planner
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>
+Installed-Size: 1435
+Depends: libboost-filesystem1.74.0 (>= 1.74.0), libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libgoogle-glog0v5 (>= 0.5.0+really0.4.0), libpugixml1v5 (>= 1.4), libstdc++6 (>= 11), libyaml-cpp0.7 (>= 0.7.0), libboost-all-dev, libgoogle-glog-dev, libpugixml-dev, libyaml-cpp-dev, ros-humble-ament-index-cpp, ros-humble-behavior-tree-action-builder, ros-humble-behaviortree-cpp-v3, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-lua-vendor, ros-humble-pluginlib, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-robotx-behavior-msgs, ros-humble-robotx-behavior-tree, ros-humble-sol-vendor
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-bt-planner_0.0.0-0jammy_amd64.deb
+Size: 271576
+MD5sum: 1d6c54a5f97c468cb717ef300e909c46
+SHA1: 640c4a1e317ee008b4448f0105a8883548ca67c5
+SHA256: 1ec12ffc06e62085a6a988bf3a2942c6f7d83d64156e522bf3b1ae656b00b0d1
+SHA512: 521964f88dcb60ee5fe232636ba3e9a5e394932af61a9712fbebeb77fda371cfc983c93f86024eb4da517127de4b108617736fa63cd6408f34c92dd449a0fd3e
+Description: TODO
+
+Package: ros-humble-robotx-communication
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 1065
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-geographic-msgs, ros-humble-mock-server, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-robotx-msgs, ros-humble-tcp-sender
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-communication_0.0.0-0jammy_amd64.deb
+Size: 169226
+MD5sum: b0f5ea05e58e25eb521bc10a77d0106b
+SHA1: 2b4212dce5a0fc031389e7d6905a1a0b37e8a178
+SHA256: 20688f2840cdba902c02e77fd16d594e93d18e155d82d4104e47dcb691240397
+SHA512: 57d44814fc38aea3d6198e8e13ae31302042a8cebea04279a230da4d9a29c42961d64a7cedb0802f0f552ee2e953afe5a72ec333d82231aba4fa18f13fd74eb1
+Description: Communication protocol implementation for Maritime RobotX Challenge.
+
+Package: ros-humble-robotx-costmap-calculator
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: asahi <aki.grade2580@outlook.jp>
+Installed-Size: 3108
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libpcl-common1.12 (>= 1.12.1+dfsg), libpcl-filters1.12 (>= 1.12.1+dfsg), libstdc++6 (>= 11), libtinyxml2-9 (>= 8.0.0), libeigen3-dev, libpcl-dev, ros-humble-ament-cmake-auto, ros-humble-data-buffer, ros-humble-filters, ros-humble-geometry-msgs-data-buffer, ros-humble-grid-map, ros-humble-grid-map-ros, ros-humble-pcl-apps-msgs, ros-humble-pcl-conversions, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-tf2-geometry-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-costmap-calculator_0.0.0-0jammy_amd64.deb
+Size: 493642
+MD5sum: b5eecb365e0025e431a0c77841d1f306
+SHA1: 0221c2b8b0914740312df1700ca7335cafecdb3f
+SHA256: 681626295c9c54bb3b404878ca0291b2afb7f01947bd3a80b96d85884ae06a0a
+SHA512: f2bed59cd699f7ae56ddd908d792f63bf51ab63685e3a96a5397f2468ca1f28bf10734e83b1cf91010c993bee5e77d2959a5686fe96fc98754824e4bee17507d
+Description: TODO: Package description
+
+Package: ros-humble-robotx-ekf
+Architecture: amd64
+Version: 1.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: kentaokamoto <kenntabsk@gmail.com>
+Installed-Size: 1070
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-ament-cmake-auto, ros-humble-geometry-msgs, ros-humble-nav-msgs, ros-humble-rclcpp, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-ekf_1.0.0-0jammy_amd64.deb
+Size: 186040
+MD5sum: d021c5cf0a3026d20524f9bf946720e7
+SHA1: a2eb3b9a6ad12c0e8566772304cd01624e551b8c
+SHA256: 9685804f8909a65842f64a8f34952cc67729f4caca32340000ac1ab1a58e6f4a
+SHA512: e611758291a5ae8e7a763559cb27226210d5b04eba9a83df6b6050f48e4651ef9a3f1bc52378421b4ff1341d58c20d4d4f948969f60e6fe54afb7cdfde8c07d6
+Description: extended kalman filter for wam-v
+
+Package: ros-humble-robotx-msgs
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 493
+Depends: libc6 (>= 2.4), libpython3.10 (>= 3.10.0), libstdc++6 (>= 4.1.1), ros-humble-fastcdr, ros-humble-rosidl-default-runtime
+Filename: dists/jammy/universe/binary-amd64/ros-humble-robotx-msgs_0.0.0-0jammy_amd64.deb
+Size: 39918
+MD5sum: 79c0a011f5250c04b40a1831962e06e8
+SHA1: 70f2bc8c66c835d11147b663d5a363de0a4d2a39
+SHA256: bbf367b43ec1dd35e3360aa9961ab50b9c2b3fa3f25d2cf705a00c044b9cd205
+SHA512: 0dbbf858c2f687cb18b2c785c42ed72ef817669cff25a8ea677cbabbe719fecf44069bb879c5bb20c1a8bbbae74dfaa2848ae11490a2d9650cfbfb5e75959b9f
+Description: Message definition for Maritime RobotX Challenge.
+
+Package: ros-humble-ros-kvh1750
+Architecture: amd64
+Version: 1.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Jason Ziglar <jpz@vt.edu>
+Installed-Size: 446
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-ament-cmake-auto, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-serial
+Filename: dists/jammy/universe/binary-amd64/ros-humble-ros-kvh1750_1.0.0-0jammy_amd64.deb
+Size: 112126
+MD5sum: c155b5febcc1722ad678bebfde5fd8c9
+SHA1: a603d700c3eed8cc5fba6596fef71c59fab68d26
+SHA256: 8fee342c5c316f94519f714d16289504372fef54b8dfe9a9289ee1bc63b20d8f
+SHA512: b3f9b0f4a9d7693e19207c8330550b52bcead9545d25a990a64a4f236c3d5ca686dd7bbe0e7d834b998783d668f1b75749ca0fd8de337472b522db5b7ca62cbf
+Description: KVH 1750 IMU Driver
+
+Package: ros-humble-scan-segmentation
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 817
+Depends: libc6 (>= 2.35), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-dev, ros-humble-pcl-apps-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-scan-segmentation_0.0.0-0jammy_amd64.deb
+Size: 213192
+MD5sum: 8328074dc49cb995f761e10bb753eae2
+SHA1: 4af9e01c18069dd394598e22306f88f73e92d80a
+SHA256: c47ae7399f0ae5107ed14a6fb58231625f997596ef8c38b936e056713d7606fc
+SHA512: b1dd0f1390f693a2c4ae8c16b47918cbda4436c7fd4dbcff153a0b727b4753f6e0dceff0c02d9c656e6e96677a0273c281ea1489749400c7a0a6b695f9a980fc
+Description: TODO: Package description
+
+Package: ros-humble-sdl2-vendor2
+Architecture: amd64
+Version: 3.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Installed-Size: 4125
+Depends: libc6 (>= 2.34), libhidapi-dev
+Filename: dists/jammy/universe/binary-amd64/ros-humble-sdl2-vendor2_3.0.0-0jammy_amd64.deb
+Size: 967114
+MD5sum: 5c7454f474a00e5b639246d8877d305b
+SHA1: b40ce9b4b00a8ec8194ecdec1a90117b0345d881
+SHA256: 1716426d64e2711e37243ec7d70ec683a88d0677ea7583e229b21ddc05d69dd4
+SHA512: 1c8b2662a04dfcea7e80c0c349c3a6d68f4a5d0305aa03652a69265ea1c4fd43884535205db480adab22efa700e4aa8e83b518cb9e17427346b48450b6dbf523
+Description: Vendor library for SDL2.
+
+Package: ros-humble-serial
+Architecture: amd64
+Version: 1.2.1-0jammy
+Priority: optional
+Section: misc
+Maintainer: William Woodall <william@osrfoundation.org>
+Installed-Size: 522
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 11), ros-humble-ament-cmake-auto
+Filename: dists/jammy/universe/binary-amd64/ros-humble-serial_1.2.1-0jammy_amd64.deb
+Size: 74026
+MD5sum: 92426713a746150c3c0c7523834d4fb0
+SHA1: 4c0d30d2ba906e734578e3260b37bab43096397f
+SHA256: cba7f00402527a4878fe58b9dd71e7abf63c8c5524ea5aa20ed6fa1c08116f52
+SHA512: 7fed5fc217e1edece1565781147d5bba63ec88769af149c2b52af0b0d571620689663b7335aaddd05228df8757520835ab264c1e349026539146cb40a9bd732e
+Homepage: http://wjwwood.github.com/serial/
+Description: Serial is a cross-platform, simple to use library for using serial ports on computers.
+ This library provides a C++, object oriented interface for interacting with RS-232 like devices on Linux and Windows.
+
+Package: ros-humble-tcp-sender
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 174
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), libboost-all-dev, ros-humble-ament-cmake-auto, ros-humble-rclcpp
+Filename: dists/jammy/universe/binary-amd64/ros-humble-tcp-sender_0.0.0-0jammy_amd64.deb
+Size: 38348
+MD5sum: b09deeca957261142392f2519dadfe0e
+SHA1: a4002c4600c828ab4f707f67f6ce9d99a3b2f7fb
+SHA256: fd2bf2d40a62727d3f35a470a4527dcddf36cfe4ab57a691a7fc445eaad9cbbf
+SHA512: 29150663c57d5093b22cee05a8b1cc9beaeaaa667005e5d33f58abf470b554f6de392b393954d87e5ec2441b3b0eb39bfdf5e70d037313bddd23aae4a81b5a9a
+Description: library for sending string with TCP
+
+Package: ros-humble-usv-controller
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 767
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), ros-humble-control-toolbox, ros-humble-controller-interface, ros-humble-geometry-msgs, ros-humble-hardware-interface, ros-humble-pluginlib, ros-humble-rclcpp, ros-humble-rclcpp-lifecycle, ros-humble-realtime-tools, ros-humble-sensor-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-usv-controller_0.0.0-0jammy_amd64.deb
+Size: 142468
+MD5sum: 32759aed499e201f02cddd90bfdbcd7f
+SHA1: 408d496b30ec8cc73f0c38ecdec804ee75715483
+SHA256: 1f1b821c45d29cccb2e23abe4202d9d653b0a1b093fc5e0de778e8a94c64b77c
+SHA512: 53a09c56c602ff3667400d4b87fd7a7c42f348a8794904585adc3804a0feb3c4a6e881f557473682f7e5d695840178ce60dee8791b3777ffe5c52fc25f4b5460
+Description: TODO: Package description
+
+Package: ros-humble-velocity-planner
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 4450
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), liborocos-kdl1.5 (>= 1.5.1), libstdc++6 (>= 11), libboost-all-dev, libeigen3-dev, ros-humble-color-names, ros-humble-geometry-msgs, ros-humble-hermite-path-msgs, ros-humble-hermite-path-planner, ros-humble-message-filters, ros-humble-quaternion-operation, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-tf2-geometry-msgs, ros-humble-tf2-ros, ros-humble-tf2-sensor-msgs, ros-humble-visualization-msgs
+Filename: dists/jammy/universe/binary-amd64/ros-humble-velocity-planner_0.0.0-0jammy_amd64.deb
+Size: 607756
+MD5sum: 8e3b87805af7903c0cab65acd8b3fab1
+SHA1: e8bf03cf52f475a0173af06f45e4cee81fddb10d
+SHA256: 0183c5886563b30e24a65ee1d151b516cf80188a5b4343d095a338bb4075a654
+SHA512: bb10315317fcc9f3e798bbd69749bc6f5aead615427444a5bf2896d1c247c4cc7642edc88ddcc15379f9ba976bcddad27403fea9c1a60525435eff2fb57119d6
+Description: Velociy planner for hermite_path_planner
+
+Package: ros-humble-wamv-control
+Architecture: amd64
+Version: 0.0.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: masaya <ms.kataoka@gmail.com>
+Installed-Size: 201
+Depends: libc6 (>= 2.34), libconsole-bridge1.0 (>= 1.0.1+dfsg2), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11), nlohmann-json3-dev, ros-humble-hardware-interface, ros-humble-pluginlib, ros-humble-rclcpp, ros-humble-ros2-control, ros-humble-tcp-sender, ros-humble-xacro
+Filename: dists/jammy/universe/binary-amd64/ros-humble-wamv-control_0.0.0-0jammy_amd64.deb
+Size: 59768
+MD5sum: 90f308df0048bb7e4df34ed6be193166
+SHA1: 62cf3c5a65b810cb05ffdac0cb3718f5f8acd1ca
+SHA256: 860b9fdcdd99c5ddd4e8ac692a77331c9e56f3b6c8ff3254d7b8420ab55e875d
+SHA512: 92893c2cd7a5f2c61743337bba1752d48cbf5e95c4abfe5a7d6111797f9d744401d6e9178d9806a853f8525c56d241dc9fcebfe236cdb7c754c80f7be92f4ce1
+Description: ROS2 hardware interface for wamv
+
+Package: ros-humble-wamv-description
+Architecture: amd64
+Version: 1.3.0-0jammy
+Priority: optional
+Section: misc
+Maintainer: Carlos Aguero <caguero@osrfoundation.org>
+Installed-Size: 13621
+Depends: ros-humble-joint-state-broadcaster, ros-humble-joy, ros-humble-robot-state-publisher, ros-humble-usv-controller, ros-humble-wamv-control, ros-humble-xacro
+Filename: dists/jammy/universe/binary-amd64/ros-humble-wamv-description_1.3.0-0jammy_amd64.deb
+Size: 7445342
+MD5sum: e7efa300c7728671f9ad19333cb53860
+SHA1: c68193ae33c433e33ffce5f0a8d84f382cb46260
+SHA256: 1f8aab1d57c4573d57ed0064d019dd66867e91b6b7c8ee9917b682f6641ba25e
+SHA512: a8a3cdec9e487e14e1606984783c8649078683375e145c8a3951c3e8f2617ccd7698bcd5315b2cbb5f237da920c57813f1540c0394233c59253105c47404bced
+Homepage: http://wiki.ros.org/wamv_description
+Description: This package provides a URDF model of WAM-V
+
