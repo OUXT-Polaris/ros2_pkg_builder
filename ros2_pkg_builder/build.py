@@ -25,7 +25,6 @@ def build_deb_packages(
     build_builder_image: bool,
     packages_above: str,
     apt_server: str,
-    cacher_image_name: str,
 ) -> None:
     logger = get_logger(__name__)
     logger.info("Start building debian packages.")
@@ -61,28 +60,6 @@ def build_deb_packages(
                 .joinpath("docker-bake.hcl")
             ],
         )
-        logger.info("Building cacher image for " + architecture + "/" + rosdistro)
-        docker.buildx.bake(
-            targets=[rosdistro + "-cacher"],
-            load=True,
-            set={
-                "*.platform": "linux/" + architecture,
-                "*.context": Path(ros2_pkg_builder.__path__[0]).joinpath("docker"),
-                "*.tags": cacher_image_name + ":" + rosdistro,
-            },
-            files=[
-                Path(ros2_pkg_builder.__path__[0])
-                .joinpath("docker")
-                .joinpath("docker-bake.hcl")
-            ],
-        )
-    cacher = docker.run(
-        image=cacher_image_name + ":" + rosdistro,
-        detach=True,
-        publish=[(4000, 4000)],
-        networks=["host"],
-        remove=True,
-    )
     docker.run(
         image="wamvtan/ros2_pkg_builder:" + rosdistro,
         volumes=[
@@ -96,9 +73,7 @@ def build_deb_packages(
             "APT_SERVER": apt_server,
         },
         tty=True,
-        networks=["host"],
     )
-    cacher.remove()
 
 
 def main():
@@ -131,11 +106,6 @@ def main():
         help="List of build target packages.",
     )
     parser.add_argument("--apt-server", type=str, default="ftp.jaist.ac.jp/pub/Linux")
-    parser.add_argument(
-        "--cacher-image-name",
-        type=str,
-        default="docker.io/wamvtan/ros2_pkg_builder_cacher",
-    )
     args = parser.parse_args()
     build_deb_packages(
         args.architecture,
@@ -144,7 +114,6 @@ def main():
         args.build_builder_image,
         args.packages_above,
         args.apt_server,
-        args.cacher_image_name,
     )
 
 
