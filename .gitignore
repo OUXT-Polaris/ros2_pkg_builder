@@ -1,7 +1,0 @@
-workspace.repos
-amd64
-arm64
-__pycache__
-
-# logging output
-log.txt
