@@ -36,14 +36,15 @@ target "humble" {
   }
 }
 
+// Grid map does not released in comment outed distribution
 group "cache" {
-  targets = ["cache-latest", "cache-iron", "cache-humble", "cache-rolling"]
+  targets = ["cache-latest", "cache-humble"] # "cache-iron", "cache-rolling" ]
 }
 
 target "cache-latest" {
   target = "cache-stage"
   dockerfile = "Dockerfile.cache"
-  tags = ["docker.io/wamvtan/robotx_buildfarm:cache-latest"]
+  tags = ["docker.io/wamvtan/robotx_buildfarm:latest"]
   args = {
     "ROS_DISTRO" : "latest"
   }
@@ -51,24 +52,24 @@ target "cache-latest" {
 }
 
 target "cache-rolling" {
-  inherits = ["latest"]
-  tags = ["docker.io/wamvtan/robotx_buildfarm:cache-rolling"]
+  inherits = ["cache-latest"]
+  tags = ["docker.io/wamvtan/robotx_buildfarm:rolling"]
   args = {
     "ROS_DISTRO" : "rolling"
   }
 }
 
 target "cache-iron" {
-  inherits = ["latest"]
-  tags = ["docker.io/wamvtan/robotx_buildfarm:cache-iron"]
+  inherits = ["cache-latest"]
+  tags = ["docker.io/wamvtan/robotx_buildfarm:iron"]
   args = {
     "ROS_DISTRO" : "iron"
   }
 }
 
 target "cache-humble" {
-  inherits = ["latest"]
-  tags = ["docker.io/wamvtan/robotx_buildfarm:cache-humble"]
+  inherits = ["cache-latest"]
+  tags = ["docker.io/wamvtan/robotx_buildfarm:humble"]
   args = {
     "ROS_DISTRO" : "humble"
   }

@@ -36,7 +36,7 @@ jobs:
             ./docker-bake.hcl
           targets: |
             builder
-  bake_ouxt_buildfarm:
+  bake_cache_for_ouxt_buildfarm:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
