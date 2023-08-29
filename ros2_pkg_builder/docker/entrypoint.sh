@@ -18,7 +18,7 @@ cd /artifacts && sh update_apt_repo.sh
 
 cd /workspace && colcon list -t -p --packages-above $PACKAGES_ABOVE | xargs -I{} bash -c \
     'echo {} && cd {} && \
-    rosdep install -iy --from-paths . && \
+    rosdep install -iy -t buildtool_export -t build -t buildtool -t build_export -t test --from-paths . && \
     bloom-generate rosdebian --os-name ubuntu --os-version $DEB_DISTRO --ros-distro $ROS_DISTRO && \
     fakeroot debian/rules binary && cd /artifacts && sh update_apt_repo.sh && \
     dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-$ARCHITECTURE/ros-$ROS_DISTRO-*.deb'
