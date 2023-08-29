@@ -7,7 +7,7 @@ sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 vcs import . < workspace.repos
 
 apt update
-rosdep install -iy --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
+rosdep install -iy -t buildtool_export -t build -t buildtool -t build_export -t test --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
 
 colcon list -t -p | xargs -L 1 bash -c \
     'cd "$1"; pkg=$(colcon list -n);pkg_with_prefix=$(echo $pkg|echo "ros-humble-"$(sed -e 's/_/-/g')); \
