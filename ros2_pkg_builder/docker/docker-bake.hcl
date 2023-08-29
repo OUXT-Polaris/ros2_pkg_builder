@@ -4,6 +4,7 @@ group "default" {
 
 target "latest" {
   target = "build-base-stage"
+  dockerfile = "Dockerfile.builder"
   tags = ["docker.io/wamvtan/ros2_pkg_builder:latest"]
   args = {
     "ROS_DISTRO" : "latest"
