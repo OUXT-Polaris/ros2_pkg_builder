@@ -75,6 +75,7 @@ def build_deb_packages(
                 .joinpath("docker-bake.hcl")
             ],
         )
+
     docker.run(
         image="wamvtan/ros2_pkg_builder:" + rosdistro,
         volumes=[

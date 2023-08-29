@@ -2,17 +2,17 @@
 echo "Changing apt server to $APT_SERVER"
 sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 
-vcs import . < workspace.repos
+cd /artifacts && sh update_apt_repo.sh
 
-apt update
-rosdep install -iy --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
+vcs import . < workspace.repos
 
 colcon list -t -p | xargs -L 1 bash -c \
     'cd "$1"; pkg=$(colcon list -n);pkg_with_prefix=$(echo $pkg|echo "ros-humble-"$(sed -e 's/_/-/g')); \
     yq eval -i ".\"$pkg\".ubuntu=[\"$pkg_with_prefix\"]" /artifacts/rosdep/${ROS_DISTRO}.yaml' _
 rosdep update
 
-cd /artifacts && sh update_apt_repo.sh
+apt update
+rosdep install -iy --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
 
 cd /workspace && colcon list -t -p --packages-above $PACKAGES_ABOVE | xargs -I{} bash -c \
     'echo {} && cd {} && \
