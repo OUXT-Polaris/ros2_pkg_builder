@@ -2,7 +2,10 @@
 echo "Changing apt server to $APT_SERVER"
 sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 
-cd /artifacts && sh update_apt_repo.sh
+cd /artifacts
+sh update_apt_repo.sh
+
+cd /workspace
 
 vcs import . < workspace.repos
 
