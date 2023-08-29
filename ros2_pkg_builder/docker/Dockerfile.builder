@@ -1,5 +1,6 @@
 ARG ROS_DISTRO=humble
-FROM ros:${ROS_DISTRO} as build-base-stage
+ARG IMAGE_NAME=ros
+FROM ${IMAGE_NAME}:${ROS_DISTRO} as build-stage
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y \

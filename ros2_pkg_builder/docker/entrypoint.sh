@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# Building packages
 echo "Changing apt server to $APT_SERVER"
 sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 
