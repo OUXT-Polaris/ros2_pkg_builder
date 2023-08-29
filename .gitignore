@@ -2,4 +2,6 @@ workspace.repos
 amd64
 arm64
 __pycache__
-*.tar
+
+# logging output
+log.txt

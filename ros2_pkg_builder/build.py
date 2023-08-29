@@ -1,11 +1,21 @@
 import argparse
+import json
 import os
 import shutil
+from logging import config, getLogger
 from pathlib import Path
 
 from python_on_whales import docker
 
 import ros2_pkg_builder
+
+
+def get_logger(logger_name: str):
+    logger = getLogger(logger_name)
+    with open(Path(ros2_pkg_builder.__path__[0]).joinpath("log_config.json"), "r") as f:
+        log_conf = json.load(f)
+    config.dictConfig(log_conf)
+    return logger
 
 
 def build_deb_packages(
@@ -17,8 +27,11 @@ def build_deb_packages(
     apt_server: str,
     cacher_image_name: str,
 ) -> None:
+    logger = get_logger(__name__)
+    logger.info("Start building debian packages.")
     output_directory = Path(architecture).joinpath("rosdep")
     if not os.path.exists(output_directory):
+        logger.info("makding directory at " + str(output_directory))
         os.makedirs(output_directory)
     with open(output_directory.joinpath(rosdistro + ".yaml"), "w") as f:
         f.write("")
@@ -34,6 +47,7 @@ def build_deb_packages(
         .joinpath("workspace.repos"),
     )
     if build_builder_image:
+        logger.info("Building builder image for " + architecture + "/" + rosdistro)
         docker.buildx.bake(
             targets=[rosdistro],
             load=True,
@@ -47,8 +61,9 @@ def build_deb_packages(
                 .joinpath("docker-bake.hcl")
             ],
         )
+        logger.info("Building cacher image for " + architecture + "/" + rosdistro)
         docker.buildx.bake(
-            targets=[rosdistro, rosdistro + "-cacher"],
+            targets=[rosdistro + "-cacher"],
             load=True,
             set={
                 "*.platform": "linux/" + architecture,
@@ -61,20 +76,29 @@ def build_deb_packages(
                 .joinpath("docker-bake.hcl")
             ],
         )
-    # docker.run(
-    #     image="wamvtan/ros2_pkg_builder:" + rosdistro,
-    #     volumes=[
-    #         (Path(architecture).absolute(), "/artifacts"),
-    #     ],
-    #     remove=False,
-    #     platform="linux/" + architecture,
-    #     envs={
-    #         "PACKAGES_ABOVE": packages_above,
-    #         "ARCHITECTURE": architecture,
-    #         "APT_SERVER": apt_server,
-    #     },
-    #     tty=True,
-    # )
+    cacher = docker.run(
+        image=cacher_image_name + ":" + rosdistro,
+        detach=True,
+        publish=[(4000, 4000)],
+        networks=["host"],
+        remove=True,
+    )
+    docker.run(
+        image="wamvtan/ros2_pkg_builder:" + rosdistro,
+        volumes=[
+            (Path(architecture).absolute(), "/artifacts"),
+        ],
+        remove=True,
+        platform="linux/" + architecture,
+        envs={
+            "PACKAGES_ABOVE": packages_above,
+            "ARCHITECTURE": architecture,
+            "APT_SERVER": apt_server,
+        },
+        tty=True,
+        networks=["host"],
+    )
+    cacher.remove()
 
 
 def main():

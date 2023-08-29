@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# Setup for cacher image
+echo 'Acquire::HTTP::Proxy "http://127.0.0.1:3142";' >> /etc/apt/apt.conf.d/01proxy
+echo 'Acquire::HTTPS::Proxy "false";' >> /etc/apt/apt.conf.d/01proxy
+
+# Building packages
 echo "Changing apt server to $APT_SERVER"
 sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 
