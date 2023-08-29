@@ -7,7 +7,7 @@ sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 vcs import . < workspace.repos
 
 apt update
-rosdep install -iy -t buildtool_export -t build -t buildtool -t build_export -t test --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
+rosdep install -iy --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
 
 colcon list -t -p | xargs -L 1 bash -c \
     'cd "$1"; pkg=$(colcon list -n);pkg_with_prefix=$(echo $pkg|echo "ros-humble-"$(sed -e 's/_/-/g')); \
@@ -18,7 +18,7 @@ cd /artifacts && sh update_apt_repo.sh
 
 cd /workspace && colcon list -t -p --packages-above $PACKAGES_ABOVE | xargs -I{} bash -c \
     'echo {} && cd {} && \
-    rosdep install -iy -t buildtool_export -t build -t buildtool -t build_export -t test --from-paths . && \
+    rosdep install -iy --from-paths . && \
     bloom-generate rosdebian --os-name ubuntu --os-version $DEB_DISTRO --ros-distro $ROS_DISTRO && \
     fakeroot debian/rules binary && cd /artifacts && sh update_apt_repo.sh && \
     dpkg -i /artifacts/dists/$DEB_DISTRO/universe/binary-$ARCHITECTURE/ros-$ROS_DISTRO-*.deb'
