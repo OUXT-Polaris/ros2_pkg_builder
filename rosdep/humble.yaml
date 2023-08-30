@@ -1,0 +1,153 @@
+geographic_msgs:
+  ubuntu:
+    - ros-humble-geographic-msgs
+hermite_path_msgs:
+  ubuntu:
+    - ros-humble-hermite-path-msgs
+ndt_omp:
+  ubuntu:
+    - ros-humble-ndt-omp
+ouxt_lint_common:
+  ubuntu:
+    - ros-humble-ouxt-lint-common
+pcl_apps_msgs:
+  ubuntu:
+    - ros-humble-pcl-apps-msgs
+robotx_behavior_msgs:
+  ubuntu:
+    - ros-humble-robotx-behavior-msgs
+sdl2_vendor2:
+  ubuntu:
+    - ros-humble-sdl2-vendor2
+behavior_tree_action_builder:
+  ubuntu:
+    - ros-humble-behavior-tree-action-builder
+data_buffer:
+  ubuntu:
+    - ros-humble-data-buffer
+dynamixel_hardware_interface:
+  ubuntu:
+    - ros-humble-dynamixel-hardware-interface
+geodesy:
+  ubuntu:
+    - ros-humble-geodesy
+hermite_path_planner:
+  ubuntu:
+    - ros-humble-hermite-path-planner
+hungarian_solver:
+  ubuntu:
+    - ros-humble-hungarian-solver
+image_processing_utils:
+  ubuntu:
+    - ros-humble-image-processing-utils
+joy_to_twist:
+  ubuntu:
+    - ros-humble-joy-to-twist
+lua_vendor:
+  ubuntu:
+    - ros-humble-lua-vendor
+message_synchronizer:
+  ubuntu:
+    - ros-humble-message-synchronizer
+mock_server:
+  ubuntu:
+    - ros-humble-mock-server
+nmea_gps_driver:
+  ubuntu:
+    - ros-humble-nmea-gps-driver
+nmea_hardware_interface:
+  ubuntu:
+    - ros-humble-nmea-hardware-interface
+odom_frame_publisher:
+  ubuntu:
+    - ros-humble-odom-frame-publisher
+ouxt_common:
+  ubuntu:
+    - ros-humble-ouxt-common
+perception_msgs:
+  ubuntu:
+    - ros-humble-perception-msgs
+playstation_controller_drivers:
+  ubuntu:
+    - ros-humble-playstation-controller-drivers
+robotx_ekf:
+  ubuntu:
+    - ros-humble-robotx-ekf
+robotx_msgs:
+  ubuntu:
+    - ros-humble-robotx-msgs
+scan_segmentation:
+  ubuntu:
+    - ros-humble-scan-segmentation
+tcp_sender:
+  ubuntu:
+    - ros-humble-tcp-sender
+usv_controller:
+  ubuntu:
+    - ros-humble-usv-controller
+boost_geometry_util:
+  ubuntu:
+    - ros-humble-boost-geometry-util
+geographic_conversion:
+  ubuntu:
+    - ros-humble-geographic-conversion
+geographic_info:
+  ubuntu:
+    - ros-humble-geographic-info
+geometry_msgs_data_buffer:
+  ubuntu:
+    - ros-humble-geometry-msgs-data-buffer
+lidar_camera_fusion:
+  ubuntu:
+    - ros-humble-lidar-camera-fusion
+local_waypoint_server:
+  ubuntu:
+    - ros-humble-local-waypoint-server
+miniv_control:
+  ubuntu:
+    - ros-humble-miniv-control
+nmea_to_geopose:
+  ubuntu:
+    - ros-humble-nmea-to-geopose
+pcl_apps:
+  ubuntu:
+    - ros-humble-pcl-apps
+perception:
+  ubuntu:
+    - ros-humble-perception
+pure_pursuit_planner:
+  ubuntu:
+    - ros-humble-pure-pursuit-planner
+robotx_behavior_tree:
+  ubuntu:
+    - ros-humble-robotx-behavior-tree
+robotx_communication:
+  ubuntu:
+    - ros-humble-robotx-communication
+serial:
+  ubuntu:
+    - ros-humble-serial
+velocity_planner:
+  ubuntu:
+    - ros-humble-velocity-planner
+wamv_control:
+  ubuntu:
+    - ros-humble-wamv-control
+hermite_path_planner_bringup:
+  ubuntu:
+    - ros-humble-hermite-path-planner-bringup
+miniv_description:
+  ubuntu:
+    - ros-humble-miniv-description
+robotx_bt_planner:
+  ubuntu:
+    - ros-humble-robotx-bt-planner
+robotx_costmap_calculator:
+  ubuntu:
+    - ros-humble-robotx-costmap-calculator
+ros_kvh1750:
+  ubuntu:
+    - ros-humble-ros-kvh1750
+wamv_description:
+  ubuntu:
+    - ros-humble-wamv-description
