@@ -2,6 +2,8 @@ ARG ROS_DISTRO=humble
 ARG IMAGE_NAME=ros
 FROM ${IMAGE_NAME}:${ROS_DISTRO} as cache-stage
 
+SHELL ["/bin/bash", "-c"]
+
 WORKDIR /workspace
 RUN echo "repositories:" >> workspace.repos
 

@@ -2,6 +2,12 @@
 echo "Changing apt server to $APT_SERVER"
 sed -i "s@archive.ubuntu.com@$APT_SERVER@g" /etc/apt/sources.list
 
+PLATFORM=$(echo $TARGETPLATFORM | sed -E 's#linux/(.*)#\1#')
+
+echo "yaml file:///artifacts/rosdep/${ROS_DISTRO}.yaml ${ROS_DISTRO}" | sudo tee /etc/ros/rosdep/sources.list.d/99-self-hosting-buildfarm.list
+
+echo "deb [arch=${PLATFORM} trusted=yes] file:///artifacts jammy universe" | sudo tee /etc/apt/sources.list.d/self-hosting-buildfarm.list
+
 cd /artifacts
 sh update_apt_repo.sh
 
@@ -9,10 +15,14 @@ cd /workspace
 
 vcs import . < workspace.repos
 
+echo "Start making local rosdep.yaml"
+
 colcon list -t -p | xargs -L 1 bash -c \
-    'cd "$1"; pkg=$(colcon list -n);pkg_with_prefix=$(echo $pkg|echo "ros-humble-"$(sed -e 's/_/-/g')); \
+    'echo "Chang directory into $1"; cd "$1"; pkg=$(colcon list -n);pkg_with_prefix=$(echo $pkg|echo "ros-humble-"$(sed -e 's/_/-/g')); \
     yq eval -i ".\"$pkg\".ubuntu=[\"$pkg_with_prefix\"]" /artifacts/rosdep/${ROS_DISTRO}.yaml' _
 rosdep update
+
+echo "Start updating apt cache"
 
 apt update
 rosdep install -iy --from-paths . --skip-keys $(colcon list -n | tr '\n' ',')
