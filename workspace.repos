@@ -67,6 +67,10 @@ repositories:
     type: git
     url: https://github.com/OUXT-Polaris/robotx_ekf.git
     version: master
+  localization/kalman_filter_localization:
+    type: git
+    url: https://github.com/OUXT-Polaris/kalman_filter_localization.git
+    version: feature/use_gnss_as_initial_pose
   perception/image_processing_utils:
     type: git
     url: https://github.com/OUXT-Polaris/image_processing_utils.git
@@ -82,6 +86,10 @@ repositories:
   perception/pcl_apps:
     type: git
     url: https://github.com/OUXT-Polaris/pcl_apps.git
+    version: master
+  perception/pcl_type_adapter
+    type: git
+    url: https://github.com/OUXT-Polaris/pcl_type_adapter.git
     version: master
   perception/perception_msgs:
     type: git
