@@ -10,8 +10,6 @@ on:
       - ros2_pkg_builder/**
       - tests/**
   workflow_dispatch:
-  schedule:
-    - cron: 0 0 * * *
   release:
     types: [published]
 
