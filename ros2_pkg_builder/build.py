@@ -25,7 +25,6 @@ def build_deb_packages(
     build_builder_image: bool,
     packages_above: str,
     apt_server: str,
-    cache_image: str,
 ) -> None:
     logger = get_logger(__name__)
     logger.info("Start building debian packages.")
@@ -46,19 +45,6 @@ def build_deb_packages(
         .joinpath("docker")
         .joinpath("workspace.repos"),
     )
-    if cache_image == "":
-        logger.info(
-            "Cache image was not specified, using ros:" + rosdistro + " as base image."
-        )
-        cache_image = "ros"
-    else:
-        logger.info(
-            "Cache image was specified, using "
-            + cache_image
-            + ":"
-            + rosdistro
-            + " as base image."
-        )
     if build_builder_image:
         logger.info("Building builder image for " + architecture + "/" + rosdistro)
         docker.buildx.bake(
@@ -67,7 +53,7 @@ def build_deb_packages(
             set={
                 "*.platform": "linux/" + architecture,
                 "*.context": Path(ros2_pkg_builder.__path__[0]).joinpath("docker"),
-                "*.args.IMAGE_NAME": cache_image,
+                "*.args.IMAGE_NAME": "builder",
             },
             files=[
                 Path(ros2_pkg_builder.__path__[0])
@@ -121,14 +107,6 @@ def main():
         default="",
         help="List of build target packages.",
     )
-    parser.add_argument(
-        "--cache-image",
-        type=str,
-        default="",
-        help="Docker image for caching rosdep dependency. \
-            This image is used for base image of builder image. \
-            If this value is empty, it means use no cache.",
-    )
     parser.add_argument("--apt-server", type=str, default="ftp.jaist.ac.jp/pub/Linux")
     args = parser.parse_args()
     build_deb_packages(
@@ -138,7 +116,6 @@ def main():
         args.build_builder_image,
         args.packages_above,
         args.apt_server,
-        args.cache_image,
     )
 
 
